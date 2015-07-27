@@ -1,0 +1,80 @@
+{
+	"3": {
+		"diamonds": 1,
+		"clubs": 1.25,
+		"hearts": 1.5,
+		"spades": 1.75
+	},
+	"4": {
+		"diamonds": 2,
+		"clubs": 2.25,
+		"hearts": 2.5,
+		"spades": 2.75
+	},
+	"5": {
+		"diamonds": 3,
+		"clubs": 3.25,
+		"hearts": 3.5,
+		"spades": 3.75
+	},
+	"6": {
+		"diamonds": 4,
+		"clubs": 4.25,
+		"hearts": 4.5,
+		"spades": 4.75
+	},
+	"7": {
+		"diamonds": 5,
+		"clubs": 5.25,
+		"hearts": 5.5,
+		"spades": 5.75
+	},
+	"8": {
+		"diamonds": 6,
+		"clubs": 6.25,
+		"hearts": 6.5,
+		"spades": 6.75
+	},
+	"9": {
+		"diamonds": 7,
+		"clubs": 7.25,
+		"hearts": 7.5,
+		"spades": 7.75
+	},
+	"10": {
+		"diamonds": 8,
+		"clubs": 8.25,
+		"hearts": 8.5,
+		"spades": 8.75
+	},
+	"j": {
+		"diamonds": 9,
+		"clubs": 9.25,
+		"hearts": 9.5,
+		"spades": 9.75
+	},
+	"q": {
+		"diamonds": 10,
+		"clubs": 10.25,
+		"hearts": 10.5,
+		"spades": 10.75
+	},
+	"k": {
+		"diamonds": 11,
+		"clubs": 11.25,
+		"hearts": 11.5,
+		"spades": 11.75
+	},
+	"a": {
+		"diamonds": 12,
+		"clubs": 12.25,
+		"hearts": 12.5,
+		"spades": 12.75
+	},
+	"2": {
+		"diamonds": 13,
+		"clubs": 13.25,
+		"hearts": 13.5,
+		"spades": 13.75
+	}
+}

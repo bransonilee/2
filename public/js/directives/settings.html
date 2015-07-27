@@ -1,0 +1,8 @@
+<div class="settings">
+	<h2>Settings</h2>
+	<input type="checkbox" id="npap"></input><label>No play after pass</label>
+	<input type="checkbox" id="cbaf"></input><label>Clear board after finish</label>
+	<input type="checkbox" id="e3ds" checked="true"></input><label>Enforce start with 3 of Diamonds</label>
+	<label id="turnlength">Turn length (seconds):</label><input class="textbox" type="text" id="timer" maxlength="2" value="{{room.settings.timer}}"></input>
+	<button ng-click="saveSettings()">Save</button>
+</div>

@@ -1,0 +1,51 @@
+<settings ng-if="showComponent(['settings'])"></settings>
+
+<div class="opponent" id="opponent0" ng-if="showComponent(['opponent', 0])">
+	<div class="playerinfo">
+		<div id="nick" ng-class="{'turn': room.turn === opponents[0].nick}">{{opponents[0].nick}}</div>
+		<div id="cardsleft" ng-if="showComponent(['cardsleft', 0])">Cards Left: {{opponents[0].cardsleft}}</div>
+	</div>
+	<div class="card-container">
+		<img class="card" ng-repeat="card in opponents[0].hand" src="/2/public/assets/cards/back/2.png"></img>
+	</div>
+</div>
+<div class="opponent" id="opponent1" ng-class="{'single': countOpponents() === 1}" ng-if="showComponent(['opponent', 1])">
+	<div class="card-container">
+		<img class="card" ng-repeat="card in opponents[1].hand" src="/2/public/assets/cards/back/2.png"></img>
+	</div>
+	<div class="playerinfo">
+		<div id="nick" ng-class="{'turn': room.turn === opponents[1].nick}">{{opponents[1].nick}}</div>
+		<div id="cardsleft" ng-if="showComponent(['cardsleft', 1])">Cards Left: {{opponents[1].cardsleft}}</div>
+	</div>
+</div>
+<div class="opponent" id="opponent2" ng-if="showComponent(['opponent', 2])">
+	<div class="playerinfo">
+		<div id="nick" ng-class="{'turn': room.turn === opponents[2].nick}">{{opponents[2].nick}}</div>
+		<div id="cardsleft" ng-if="showComponent(['cardsleft', 2])">Cards Left: {{opponents[2].cardsleft}}</div>
+	</div>
+	<div class="card-container">
+		<img class="card" ng-repeat="card in opponents[2].hand" src="/2/public/assets/cards/back/2.png"></img>
+	</div>
+</div>
+
+<div class="player">
+	<button id="startgame" ng-click="startGame()" ng-if="showComponent(['startgame'])">Start Game</button>
+	<div class="playcontrols" ng-if="room.turn === nick">
+		<button id="play">Play</button>
+		<button id="pass">Pass</button>
+		<div id="timeleft">Time left: {{timeLeft}}</div>
+	</div>
+	<div class="playerinfo">
+		<div id="nick" ng-class="{'turn': room.turn === nick}">{{nick}}</div>
+		<div id="cardsleft" ng-if="room.started">Cards Left: {{room.players[nick].cardsleft}}</div>
+	</div>
+	<div class="card-container">
+		<img class="card hand" ng-class="{'selectable': room.turn === nick}" ng-repeat="card in room.players[nick].hand" ng-attr-id="{{card.val + ' ' + card.suit}}" ng-src="{{'/public/assets/cards/'+ card.suit + '/' + card.val + '.png'}}"></img>
+	</div>
+</div>
+
+<div class="prev">
+	<div class="card-container">
+		<img class="card" ng-repeat="card in room.prev" ng-src="{{'/2/public/assets/cards/'+ card.suit + '/' + card.val + '.png'}}"></img>
+	</div>
+</div>

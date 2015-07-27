@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<base href="/2/">
+		<link href="css/main.css" rel="stylesheet"/>
+		<script src="https://cdn.socket.io/socket.io-1.3.5.js" defer></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js" defer></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.3/angular-route.js" defer></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js" defer></script>
+		<title>2</title>
+	</head>
+	<body ng-app="2App">
+		<div class="header">
+			<a href="/2/"><h1>2</h1></a>
+		</div>
+		<div class="main">
+			<div ng-view></div>
+		</div>
+		<!--Modules-->
+		<script type="text/javascript" src="js/app.js" defer></script>
+		<!--Controllers-->
+		<script type="text/javascript" src="js/controllers/MainController.js" defer></script>
+		<script type="text/javascript" src="js/controllers/GameController.js" defer></script>
+		<!--Directives-->
+		<script type="text/javascript" src="js/directives/board.js" defer></script>
+		<script type="text/javascript" src="js/directives/spectate.js" defer></script>
+		<script type="text/javascript" src="js/directives/settings.js" defer></script>
+		<!--Services-->
+		<script type="text/javascript" src="js/services/socket.js" defer></script>
+		<script type="text/javascript" src="js/services/roomservice.js" defer></script>
+	</body>
+</html>

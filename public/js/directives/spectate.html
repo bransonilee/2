@@ -1,0 +1,42 @@
+<div class="opponent spectate" id="opponent0" ng-if="showComponent(['opponent', 0])">
+	<div class="playerinfo">
+		<div id="nick" ng-class="{'turn': room.turn === opponents[0].nick}">{{opponents[0].nick}}</div>
+		<div id="cardsleft" ng-if="showComponent(['cardsleft', 0])">Cards Left: {{opponents[0].cardsleft}}</div>
+	</div>
+	<div class="card-container">
+		<img class="card" ng-repeat="card in opponents[0].hand" ng-src="{{'/2/public/assets/cards/'+ card.suit + '/' + card.val + '.png'}}"></img>
+	</div>
+</div>
+<div class="opponent spectate" id="opponent1" ng-class="{'single': countOpponents() === 2}" ng-if="showComponent(['opponent', 1])">
+	<div class="card-container">
+		<img class="card" ng-repeat="card in opponents[1].hand" ng-src="{{'/2/public/assets/cards/'+ card.suit + '/' + card.val + '.png'}}"></img>
+	</div>
+	<div class="playerinfo">
+		<div id="nick" ng-class="{'turn': room.turn === opponents[1].nick}">{{opponents[1].nick}}</div>
+		<div id="cardsleft" ng-if="showComponent(['cardsleft', 1])">Cards Left: {{opponents[1].cardsleft}}</div>
+	</div>
+</div>
+<div class="opponent spectate" id="opponent2" ng-if="showComponent(['opponent', 2])">
+	<div class="playerinfo">
+		<div id="nick" ng-class="{'turn': room.turn === opponents[2].nick}">{{opponents[2].nick}}</div>
+		<div id="cardsleft" ng-if="showComponent(['cardsleft', 2])">Cards Left: {{opponents[2].cardsleft}}</div>
+	</div>
+	<div class="card-container">
+		<img class="card" ng-repeat="card in opponents[2].hand" ng-src="{{'/2/public/assets/cards/'+ card.suit + '/' + card.val + '.png'}}"></img>
+	</div>
+</div>
+<div class="opponent spectate" id="opponent3" ng-class="{'single': countOpponents() === 2}" ng-if="showComponent(['opponent', 3])">
+	<div class="playerinfo">
+		<div id="nick" ng-class="{'turn': room.turn === opponents[3].nick}">{{opponents[3].nick}}</div>
+		<div id="cardsleft" ng-if="showComponent(['cardsleft', 3])">Cards Left: {{opponents[3].cardsleft}}</div>
+	</div>
+	<div class="card-container">
+		<img class="card" ng-repeat="card in opponents[3].hand" ng-src="{{'/2/public/assets/cards/'+ card.suit + '/' + card.val + '.png'}}"></img>
+	</div>
+</div>
+
+<div class="prev">
+	<div class="card-container">
+		<img class="card" ng-repeat="card in room.prev" ng-src="{{'/2/public/assets/cards/'+ card.suit + '/' + card.val + '.png'}}"></img>
+	</div>
+</div>
